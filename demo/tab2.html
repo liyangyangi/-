@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            list-style: none;
+        }
+        .tabBox{
+            display: inline-block;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .btns ul li{
+            float: left;
+            background: #ccc;
+            margin: 0 10px;
+            padding: 5px;
+            cursor: pointer;
+        }
+        .btns ul li:hover{
+            background: pink;
+        }
+        .btns ul li.active{
+            background: pink;
+        }
+        .box{
+            display: none;
+            margin-top: 20px;
+            line-height: 30px;
+        }
+        .box.showBox{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="tabBox" id="tabBox1">
+        <div class="btns">
+            <ul>
+                <li class="btn active">btn1</li>
+                <li class="btn">btn2</li>
+                <li class="btn">btn3</li>
+            </ul>
+        </div>
+        <div class="boxs">
+            <div class="box showBox">1111111111111111</div>
+            <div class="box">2222222222222222</div>
+            <div class="box">3333333333333333</div>
+        </div>
+    </div>
+    <div class="tabBox" id="tabBox2">
+        <div class="btns">
+            <ul>
+                <li class="btn active">btn1</li>
+                <li class="btn">btn2</li>
+                <li class="btn">btn3</li>
+            </ul>
+        </div>
+        <div class="boxs">
+            <div class="box showBox">1111111111111111</div>
+            <div class="box">2222222222222222</div>
+            <div class="box">3333333333333333</div>
+        </div>
+    </div>
+</body>
+<script src="./tab.js"></script>
+<script>
+    //面向对象1
+
+    window.onload = function(){
+        var tab1 = new tab("tabBox1");
+        var tab2 = new tab("tabBox2");
+    }
+
+    
+
+</script>
+</html>
