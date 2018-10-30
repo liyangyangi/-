@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 构造函数:工厂模式
+    //构造函数生成对象 需要的时候创建
+    function person(name,age){
+        var objc = new Object();
+        objc.name = name;
+        objc.age = age;
+        objc.sun = function(){
+            console.log(this.name+'的年龄是：'+this.age);
+        }
+        return objc;
+    };
+
+    var p1 = person('小a','20');
+    var p2 = person('小b','33');
+    p1.sun();
+    p2.sun();
+    p1.name = 'sss';
+    p2.name = 'www';
+    p1.sun();
+    p2.sun();
+    console.log(p1.sun == p2.sun);
+</script>
+</html>
